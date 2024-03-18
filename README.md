@@ -1,4 +1,4 @@
-# TD-API Plugin Example
+# Domus TDD API Plugin Example
 
 This is an example project to present how to develop a TDD-API plugin.
 This plugin does not do anything except implementing the basic features
