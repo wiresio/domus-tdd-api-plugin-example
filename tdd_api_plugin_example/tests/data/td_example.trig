@@ -1,0 +1,42 @@
+<urn:tdd:metadata> {
+    <urn:wot:context:td_id_context>
+            <urn:wot:relation:context_content>
+                    "[\"https://www.w3.org/2022/wot/td/v1.1\"]" .
+    <td:urn:node:test>
+            <urn:tdd:describes>         <urn:node:test> ;
+            <urn:tdd:expressedIn>       <https://www.w3.org/2019/wot/td> ;
+            <urn:wot:relation:has_context>  <urn:wot:context:td_id_context> .
+
+    <urn:wot:context:example_id_context>
+            <urn:wot:relation:context_content>
+                    "[{\"example\": \"https://example.td/\"}]" .
+
+    <example:urn:node:test>
+            <urn:tdd:describes>         <urn:node:test> ;
+            <urn:tdd:expressedIn>       <https://example.td/> ;
+            <urn:wot:relation:has_context>  <urn:wot:context:example_id_context> .
+}
+
+<example:urn:node:test> {
+    <urn:node:test> a <https://example.td/Test> .
+}
+
+<td:urn:node:test> {
+    <urn:node:test>
+            a       <https://www.w3.org/2019/wot/td#Thing> ;
+            <https://www.w3.org/2019/wot/td#definesSecurityScheme>
+                    [ a       <https://www.w3.org/2019/wot/security#NoSecurityScheme> ;
+                      <https://www.w3.org/2019/wot/td#hasInstanceConfiguration>
+                              <http://localhost:5000/urn:illuminance:sensor/nosec_sc>
+                    ] ;
+            <https://www.w3.org/2019/wot/td#hasSecurityConfiguration>
+                    <http://localhost:5000/urn:illuminance:sensor/nosec_sc> ;
+            <https://www.w3.org/2019/wot/td#title>
+                    "MyIlluminanceSensor" ;
+            <https://www.w3.org/2021/wot/discovery#hasRegistrationInformation>
+                    [ <https://www.w3.org/2021/wot/discovery#dateCreated>
+                              "2022-11-10T12:45:29.479861+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                      <https://www.w3.org/2021/wot/discovery#dateModified>
+                              "2022-11-10T12:45:29.479861+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+                    ] .
+}

@@ -1,0 +1,13 @@
+<urn:tdd:metadata> {
+    <urn:wot:context:W10=>
+            <urn:wot:relation:context_content>
+                    "[{\"example\": \"https://example.td/\"}]" .
+    <example:urn:node:test>
+            <urn:tdd:describes>         <urn:node:test> ;
+            <urn:tdd:expressedIn>       <https://example.td/> ;
+            <urn:wot:relation:has_context>  <urn:wot:context:W10=> .
+}
+
+<example:urn:node:test> {
+    <urn:node:test> a <https://example.td/Test>.
+}

@@ -1,0 +1,5 @@
+{
+  "@context": [{ "example": "https://example.td/" }],
+  "@id": "urn:node:test",
+  "@type": "example:Test"
+}
