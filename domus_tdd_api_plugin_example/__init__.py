@@ -11,7 +11,7 @@ from tdd.utils import (
 )
 from tdd.errors import WrongMimeType
 
-from tdd_api_plugin_example.example import (
+from domus_tdd_api_plugin_plugin_example.example import (
     get_example_description,
     validate_example,
     put_example_json_in_sparql,
@@ -19,7 +19,7 @@ from tdd_api_plugin_example.example import (
 )
 
 
-blueprint = Blueprint("tdd_api_plugin_example", __name__, url_prefix="/example")
+blueprint = Blueprint("domus_tdd_api_plugin_plugin_example", __name__, url_prefix="/example")
 
 
 @blueprint.route("/", methods=["GET"])

@@ -15,10 +15,10 @@ setup(
     ...
     entry_points={
         "tdd_api.plugins.blueprints": [
-            "example=tdd_api_plugin_example:blueprint",
+            "example=domus_tdd_api_plugin_example:blueprint",
         ],
         "tdd_api.plugins.transformers": [
-            "example=tdd_api_plugin_example.example:td_to_example",
+            "example=domus_tdd_api_plugin_example.example:td_to_example",
         ],
     },
 )
@@ -32,17 +32,17 @@ what you want, here an `example`.
 
 ## Blueprint
 
-As we defined in the [`tdd_api_plugin_example/__init__.py`](tdd_api_plugin_example/__init__.py) we define the blueprint
+As we defined in the [`domus_tdd_api_plugin_example/__init__.py`](domus_tdd_api_plugin_example/__init__.py) we define the blueprint
 as follow:
 
 ```python
-blueprint = Blueprint("tdd_api_plugin_example", __name__, url_prefix="/example")
+blueprint = Blueprint("domus_tdd_api_plugin_example", __name__, url_prefix="/example")
 ```
 
 We could have name the variable as we prefere since we have defined in the `setup.py` the right
 variable name in the entrypoint.
 
-The first parameter `"tdd_api_plugin_example"` is the name of the blueprint, the second parameter is the
+The first parameter `"domus_tdd_api_plugin_example"` is the name of the blueprint, the second parameter is the
 import module (here `__name__` since this is the same module) and we define a `url_prefix` to not redeclare it
 on each route.
 This `url_prefix` will be what distinguish the plugin routes to other. Be sure to not redefine an already imported
@@ -60,15 +60,15 @@ def describe_example(id):
 
 We use the blueprint as decorator to add the route, the path is defined regarding the `url_prefix` and we
 specify a dedicated method to match.
-You can look at the [`tdd_api_plugin_example/__init__.py`](tdd_api_plugin_example/__init__.py) file to see
+You can look at the [`domus_tdd_api_plugin_example/__init__.py`](domus_tdd_api_plugin_example/__init__.py) file to see
 other examples.
 
 ## Transformer
 
 We have defined a transformer to be sure, each time a TD is uploaded to transform it to our `Example` format
 and store in the SparqlEndpoint. To do, we declare the function to use in the entrypoint (here
-`tdd_api_plugin_example.example:td_to_example` since we use the function `td_to_example` which is define in the
-`tdd_api_plugin_example/example.py` file.
+`domus_tdd_api_plugin_example.example:td_to_example` since we use the function `td_to_example` which is define in the
+`domus_tdd_api_plugin_example/example.py` file.
 
 This method is declared like this:
 
@@ -87,13 +87,13 @@ content = get_id_description(uri, "application/n-triples", {"prefix": "td"})
 Using this content we can do whatever is needed to transform one format to another.
 Then we can store the result using the helper method `put_json_in_sparql` or `put_rdf_in_sparql` from the
 `tdd.common` module.
-You can look at the [`tdd_api_plugin_example/example.py`](tdd_api_plugin_example/example.py) file to see how it
+You can look at the [`domus_tdd_api_plugin_example/example.py`](domus_tdd_api_plugin_example/example.py) file to see how it
 is defined.
 
 ## Tests
 
 This example plugin come with some tests example to present how it can be done.
-You can find it in the folder [`tdd_api_plugin_example/tests`](tdd_api_plugin_example/tests).
+You can find it in the folder [`domus_tdd_api_plugin_example/tests`](domus_tdd_api_plugin_example/tests).
 The `test_example.py` define some tests for the `example.py` module, where the `test_td_to_example.py`
 define tests for the routes.
 

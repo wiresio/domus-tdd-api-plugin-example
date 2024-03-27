@@ -12,7 +12,7 @@ from tdd.tests.conftest import (  # noqa: F401
     test_client,
 )
 
-from tdd_api_plugin_example.tests.test_example import DATA_PATH
+from domus_tdd_api_plugin_example.tests.test_example import DATA_PATH
 
 CONFIG["LIMIT_BATCH_TDS"] = 15
 CONFIG["CHECK_SCHEMA"] = True

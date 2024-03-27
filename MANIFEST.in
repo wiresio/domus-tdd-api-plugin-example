@@ -1,4 +1,4 @@
-include ./tdd_api_plugin_example/*.py
+include ./domus_tdd_api_plugin_example/*.py
 
 include *.md
 include tox.ini
@@ -9,14 +9,14 @@ exclude .gitlab-ci.yml
 exclude .gitlab-ci-extended.yml
 
 exclude pytest.ini
-recursive-exclude tdd_api_plugin_example/tests *.json
-recursive-exclude tdd_api_plugin_example/tests *.py
-recursive-exclude tdd_api_plugin_example/tests *.jsonld
-recursive-exclude tdd_api_plugin_example/tests *.ttl
-recursive-exclude tdd_api_plugin_example/tests *.nquads
-recursive-include tdd_api_plugin_example *.jinja2
-recursive-include tdd_api_plugin_example *.json
-recursive-include tdd_api_plugin_example *.n3
-recursive-include tdd_api_plugin_example *.trig
-recursive-include tdd_api_plugin_example *.ttl
-recursive-include tdd_api_plugin_example *.xml
+recursive-exclude domus_tdd_api_plugin_example/tests *.json
+recursive-exclude domus_tdd_api_plugin_example/tests *.py
+recursive-exclude domus_tdd_api_plugin_example/tests *.jsonld
+recursive-exclude domus_tdd_api_plugin_example/tests *.ttl
+recursive-exclude domus_tdd_api_plugin_example/tests *.nquads
+recursive-include domus_tdd_api_plugin_example *.jinja2
+recursive-include domus_tdd_api_plugin_example *.json
+recursive-include domus_tdd_api_plugin_example *.n3
+recursive-include domus_tdd_api_plugin_example *.trig
+recursive-include domus_tdd_api_plugin_example *.ttl
+recursive-include domus_tdd_api_plugin_example *.xml

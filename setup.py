@@ -18,10 +18,10 @@ setup(
     },
     entry_points={
         "tdd_api.plugins.blueprints": [
-            "example=tdd_api_plugin_example:blueprint",
+            "example=domus_tdd_api_plugin_example:blueprint",
         ],
         "tdd_api.plugins.transformers": [
-            "example=tdd_api_plugin_example.example:td_to_example",
+            "example=domus_tdd_api_plugin_example.example:td_to_example",
         ],
     },
 )

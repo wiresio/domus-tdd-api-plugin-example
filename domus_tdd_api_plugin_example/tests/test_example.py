@@ -10,7 +10,7 @@ from tdd.tests.conftest import (  # noqa: F401
 )
 
 
-DATA_PATH = Path("tdd_api_plugin_example") / "tests" / "data"
+DATA_PATH = Path("domus_tdd_api_plugin_example") / "tests" / "data"
 
 
 @pytest.fixture
